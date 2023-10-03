@@ -9,3 +9,4 @@ C:\Users\Тамила\source\OOP\ObjectOrientedPractics\ObjectOrientedPractics\o
 C:\Users\Тамила\source\OOP\ObjectOrientedPractics\ObjectOrientedPractics\obj\Debug\ObjectOrientedPractics.pdb
 C:\Users\Тамила\source\OOP\ObjectOrientedPractics\ObjectOrientedPractics\obj\Debug\ObjectOrientedPractics.MainForm.resources
 C:\Users\Тамила\source\OOP\ObjectOrientedPractics\ObjectOrientedPractics\obj\Debug\ObjectOrientedPractics.View.Tabs.CustomersTab.resources
+C:\Users\Тамила\source\OOP\ObjectOrientedPractics\ObjectOrientedPractics\obj\Debug\ObjectOrientedPractics.View.Tabs.ItemsTab.resources

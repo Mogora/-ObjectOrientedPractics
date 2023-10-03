@@ -33,7 +33,9 @@ namespace ObjectOrientedPractics
             this.ItemsTabPage = new System.Windows.Forms.TabPage();
             this.CustomerstabPage = new System.Windows.Forms.TabPage();
             this.customersTabs1 = new ObjectOrientedPractics.View.Tabs.CustomersTab();
+            this.itemsTab1 = new ObjectOrientedPractics.View.Tabs.ItemsTab();
             this.tabControl.SuspendLayout();
+            this.ItemsTabPage.SuspendLayout();
             this.CustomerstabPage.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +52,7 @@ namespace ObjectOrientedPractics
             // 
             // ItemsTabPage
             // 
+            this.ItemsTabPage.Controls.Add(this.itemsTab1);
             this.ItemsTabPage.Location = new System.Drawing.Point(4, 25);
             this.ItemsTabPage.Name = "ItemsTabPage";
             this.ItemsTabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -71,11 +74,20 @@ namespace ObjectOrientedPractics
             // 
             // customersTabs1
             // 
+            this.customersTabs1.Customers = null;
             this.customersTabs1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.customersTabs1.Location = new System.Drawing.Point(3, 3);
             this.customersTabs1.Name = "customersTabs1";
             this.customersTabs1.Size = new System.Drawing.Size(825, 509);
             this.customersTabs1.TabIndex = 0;
+            // 
+            // itemsTab1
+            // 
+            this.itemsTab1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.itemsTab1.Location = new System.Drawing.Point(3, 3);
+            this.itemsTab1.Name = "itemsTab1";
+            this.itemsTab1.Size = new System.Drawing.Size(825, 509);
+            this.itemsTab1.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -86,6 +98,7 @@ namespace ObjectOrientedPractics
             this.Name = "MainForm";
             this.Text = "Object Oriented Practics";
             this.tabControl.ResumeLayout(false);
+            this.ItemsTabPage.ResumeLayout(false);
             this.CustomerstabPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -97,6 +110,7 @@ namespace ObjectOrientedPractics
         private System.Windows.Forms.TabPage ItemsTabPage;
         private System.Windows.Forms.TabPage CustomerstabPage;
         private View.Tabs.CustomersTab customersTabs1;
+        private View.Tabs.ItemsTab itemsTab1;
     }
 }
 
