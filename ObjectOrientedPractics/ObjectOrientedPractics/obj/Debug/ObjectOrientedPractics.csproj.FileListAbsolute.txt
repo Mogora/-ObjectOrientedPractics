@@ -8,4 +8,4 @@ C:\Users\Тамила\source\OOP\ObjectOrientedPractics\ObjectOrientedPractics\o
 C:\Users\Тамила\source\OOP\ObjectOrientedPractics\ObjectOrientedPractics\obj\Debug\ObjectOrientedPractics.exe
 C:\Users\Тамила\source\OOP\ObjectOrientedPractics\ObjectOrientedPractics\obj\Debug\ObjectOrientedPractics.pdb
 C:\Users\Тамила\source\OOP\ObjectOrientedPractics\ObjectOrientedPractics\obj\Debug\ObjectOrientedPractics.MainForm.resources
-C:\Users\Тамила\source\OOP\ObjectOrientedPractics\ObjectOrientedPractics\obj\Debug\ObjectOrientedPractics.View.Tabs.CustomersTabs.resources
+C:\Users\Тамила\source\OOP\ObjectOrientedPractics\ObjectOrientedPractics\obj\Debug\ObjectOrientedPractics.View.Tabs.CustomersTab.resources
