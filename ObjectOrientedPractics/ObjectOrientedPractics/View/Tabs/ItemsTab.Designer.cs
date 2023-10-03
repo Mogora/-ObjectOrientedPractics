@@ -40,7 +40,7 @@ namespace ObjectOrientedPractics.View.Tabs
             this.SelectedItemPanel = new System.Windows.Forms.Panel();
             this.NameTextBox = new System.Windows.Forms.TextBox();
             this.NameLabel = new System.Windows.Forms.Label();
-            this.FullNameTextBox = new System.Windows.Forms.TextBox();
+            this.CostTextBox = new System.Windows.Forms.TextBox();
             this.CostLabel = new System.Windows.Forms.Label();
             this.IdTextBox = new System.Windows.Forms.TextBox();
             this.SelectedCustomerLabel = new System.Windows.Forms.Label();
@@ -89,6 +89,7 @@ namespace ObjectOrientedPractics.View.Tabs
             this.RemoveButton.TabIndex = 1;
             this.RemoveButton.Text = "Remove";
             this.RemoveButton.UseVisualStyleBackColor = true;
+            this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
             // 
             // AddPanel
             // 
@@ -106,6 +107,7 @@ namespace ObjectOrientedPractics.View.Tabs
             this.AddButton.TabIndex = 1;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // ItemsListBox
             // 
@@ -115,6 +117,7 @@ namespace ObjectOrientedPractics.View.Tabs
             this.ItemsListBox.Name = "ItemsListBox";
             this.ItemsListBox.Size = new System.Drawing.Size(361, 404);
             this.ItemsListBox.TabIndex = 1;
+            this.ItemsListBox.SelectedIndexChanged += new System.EventHandler(this.ItemsListBox_SelectedIndexChanged);
             // 
             // ItemsLabel
             // 
@@ -132,7 +135,7 @@ namespace ObjectOrientedPractics.View.Tabs
             this.SelectedItemPanel.Controls.Add(this.DescriptionLabel);
             this.SelectedItemPanel.Controls.Add(this.NameTextBox);
             this.SelectedItemPanel.Controls.Add(this.NameLabel);
-            this.SelectedItemPanel.Controls.Add(this.FullNameTextBox);
+            this.SelectedItemPanel.Controls.Add(this.CostTextBox);
             this.SelectedItemPanel.Controls.Add(this.CostLabel);
             this.SelectedItemPanel.Controls.Add(this.IdTextBox);
             this.SelectedItemPanel.Controls.Add(this.SelectedCustomerLabel);
@@ -149,6 +152,7 @@ namespace ObjectOrientedPractics.View.Tabs
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(434, 123);
             this.NameTextBox.TabIndex = 8;
+            this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
             // 
             // NameLabel
             // 
@@ -159,12 +163,13 @@ namespace ObjectOrientedPractics.View.Tabs
             this.NameLabel.TabIndex = 7;
             this.NameLabel.Text = "Name:";
             // 
-            // FullNameTextBox
+            // CostTextBox
             // 
-            this.FullNameTextBox.Location = new System.Drawing.Point(87, 70);
-            this.FullNameTextBox.Name = "FullNameTextBox";
-            this.FullNameTextBox.Size = new System.Drawing.Size(131, 22);
-            this.FullNameTextBox.TabIndex = 6;
+            this.CostTextBox.Location = new System.Drawing.Point(87, 70);
+            this.CostTextBox.Name = "CostTextBox";
+            this.CostTextBox.Size = new System.Drawing.Size(131, 22);
+            this.CostTextBox.TabIndex = 6;
+            this.CostTextBox.TextChanged += new System.EventHandler(this.CostTextBox_TextChanged);
             // 
             // CostLabel
             // 
@@ -218,6 +223,7 @@ namespace ObjectOrientedPractics.View.Tabs
             this.DescriptionTextBox.Name = "DescriptionTextBox";
             this.DescriptionTextBox.Size = new System.Drawing.Size(434, 123);
             this.DescriptionTextBox.TabIndex = 10;
+            this.DescriptionTextBox.TextChanged += new System.EventHandler(this.DescriptionTextBox_TextChanged);
             // 
             // ItemsTab
             // 
@@ -251,7 +257,7 @@ namespace ObjectOrientedPractics.View.Tabs
         private System.Windows.Forms.Panel SelectedItemPanel;
         private System.Windows.Forms.TextBox NameTextBox;
         private System.Windows.Forms.Label NameLabel;
-        private System.Windows.Forms.TextBox FullNameTextBox;
+        private System.Windows.Forms.TextBox CostTextBox;
         private System.Windows.Forms.Label CostLabel;
         private System.Windows.Forms.TextBox IdTextBox;
         private System.Windows.Forms.Label SelectedCustomerLabel;
