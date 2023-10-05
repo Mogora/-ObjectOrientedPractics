@@ -23,6 +23,9 @@ namespace ObjectOrientedPractics.View.Tabs
         /// </summary>
         private Item _currentItem;
 
+        /// <summary>
+        /// Создаёт экзампляр класса <see cref="ItemsTab"/>.
+        /// </summary>
         public ItemsTab()
         {
             _items = new List<Item>();

@@ -46,11 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Address.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\Enums\Category.cs" />
     <Compile Include="Model\Item.cs" />
     <Compile Include="Services\AppColor.cs" />
     <Compile Include="Services\ValueValidator.cs" />
+    <Compile Include="View\Controls\AddressControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Controls\AddressControl.Designer.cs">
+      <DependentUpon>AddressControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
