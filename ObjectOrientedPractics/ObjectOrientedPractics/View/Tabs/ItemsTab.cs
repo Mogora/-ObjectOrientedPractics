@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using ObjectOrientedPractics.Model;
 using ObjectOrientedPractics.Services;
+using ObjectOrientedPractics.Model.Enums;
 
 namespace ObjectOrientedPractics.View.Tabs
 {
@@ -27,6 +28,13 @@ namespace ObjectOrientedPractics.View.Tabs
             _items = new List<Item>();
 
             InitializeComponent();
+
+            var items = Enum.GetValues(typeof(Category));
+
+            foreach (var item in items)
+            {
+                CategoryComboBox.Items.Add(item);
+            }
  
         }
 
@@ -173,5 +181,19 @@ namespace ObjectOrientedPractics.View.Tabs
 
             UpdateItemInfo(_currentItem);
         }
+
+        private void CategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int indexCategory = CategoryComboBox.SelectedIndex;
+            int indexListBox = ItemsListBox.SelectedIndex;
+
+            if ((indexCategory == -1) || (indexListBox == -1))
+            {
+                return;
+            }
+
+            _currentItem.Category = (Category)CategoryComboBox.SelectedItem;
+        }
     }
 }
+

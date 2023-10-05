@@ -38,6 +38,8 @@ namespace ObjectOrientedPractics.View.Tabs
             this.ItemsListBox = new System.Windows.Forms.ListBox();
             this.ItemsLabel = new System.Windows.Forms.Label();
             this.SelectedItemPanel = new System.Windows.Forms.Panel();
+            this.DescriptionTextBox = new System.Windows.Forms.TextBox();
+            this.DescriptionLabel = new System.Windows.Forms.Label();
             this.NameTextBox = new System.Windows.Forms.TextBox();
             this.NameLabel = new System.Windows.Forms.Label();
             this.CostTextBox = new System.Windows.Forms.TextBox();
@@ -45,8 +47,8 @@ namespace ObjectOrientedPractics.View.Tabs
             this.IdTextBox = new System.Windows.Forms.TextBox();
             this.SelectedCustomerLabel = new System.Windows.Forms.Label();
             this.IdLabel = new System.Windows.Forms.Label();
-            this.DescriptionLabel = new System.Windows.Forms.Label();
-            this.DescriptionTextBox = new System.Windows.Forms.TextBox();
+            this.CategoryComboBox = new System.Windows.Forms.ComboBox();
+            this.CategoryLabel = new System.Windows.Forms.Label();
             this.ItemsPanel.SuspendLayout();
             this.ButtonsPanel.SuspendLayout();
             this.RemovePanel.SuspendLayout();
@@ -131,6 +133,8 @@ namespace ObjectOrientedPractics.View.Tabs
             // 
             // SelectedItemPanel
             // 
+            this.SelectedItemPanel.Controls.Add(this.CategoryLabel);
+            this.SelectedItemPanel.Controls.Add(this.CategoryComboBox);
             this.SelectedItemPanel.Controls.Add(this.DescriptionTextBox);
             this.SelectedItemPanel.Controls.Add(this.DescriptionLabel);
             this.SelectedItemPanel.Controls.Add(this.NameTextBox);
@@ -145,9 +149,27 @@ namespace ObjectOrientedPractics.View.Tabs
             this.SelectedItemPanel.Size = new System.Drawing.Size(452, 509);
             this.SelectedItemPanel.TabIndex = 2;
             // 
+            // DescriptionTextBox
+            // 
+            this.DescriptionTextBox.Location = new System.Drawing.Point(9, 323);
+            this.DescriptionTextBox.Multiline = true;
+            this.DescriptionTextBox.Name = "DescriptionTextBox";
+            this.DescriptionTextBox.Size = new System.Drawing.Size(434, 123);
+            this.DescriptionTextBox.TabIndex = 10;
+            this.DescriptionTextBox.TextChanged += new System.EventHandler(this.DescriptionTextBox_TextChanged);
+            // 
+            // DescriptionLabel
+            // 
+            this.DescriptionLabel.AutoSize = true;
+            this.DescriptionLabel.Location = new System.Drawing.Point(6, 303);
+            this.DescriptionLabel.Name = "DescriptionLabel";
+            this.DescriptionLabel.Size = new System.Drawing.Size(83, 17);
+            this.DescriptionLabel.TabIndex = 9;
+            this.DescriptionLabel.Text = "Description:";
+            // 
             // NameTextBox
             // 
-            this.NameTextBox.Location = new System.Drawing.Point(9, 129);
+            this.NameTextBox.Location = new System.Drawing.Point(9, 165);
             this.NameTextBox.Multiline = true;
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(434, 123);
@@ -157,7 +179,7 @@ namespace ObjectOrientedPractics.View.Tabs
             // NameLabel
             // 
             this.NameLabel.AutoSize = true;
-            this.NameLabel.Location = new System.Drawing.Point(6, 109);
+            this.NameLabel.Location = new System.Drawing.Point(6, 145);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(49, 17);
             this.NameLabel.TabIndex = 7;
@@ -207,23 +229,23 @@ namespace ObjectOrientedPractics.View.Tabs
             this.IdLabel.TabIndex = 0;
             this.IdLabel.Text = "ID:";
             // 
-            // DescriptionLabel
+            // CategoryComboBox
             // 
-            this.DescriptionLabel.AutoSize = true;
-            this.DescriptionLabel.Location = new System.Drawing.Point(6, 268);
-            this.DescriptionLabel.Name = "DescriptionLabel";
-            this.DescriptionLabel.Size = new System.Drawing.Size(83, 17);
-            this.DescriptionLabel.TabIndex = 9;
-            this.DescriptionLabel.Text = "Description:";
+            this.CategoryComboBox.FormattingEnabled = true;
+            this.CategoryComboBox.Location = new System.Drawing.Point(87, 98);
+            this.CategoryComboBox.Name = "CategoryComboBox";
+            this.CategoryComboBox.Size = new System.Drawing.Size(131, 24);
+            this.CategoryComboBox.TabIndex = 11;
+            this.CategoryComboBox.SelectedIndexChanged += new System.EventHandler(this.CategoryComboBox_SelectedIndexChanged);
             // 
-            // DescriptionTextBox
+            // CategoryLabel
             // 
-            this.DescriptionTextBox.Location = new System.Drawing.Point(9, 288);
-            this.DescriptionTextBox.Multiline = true;
-            this.DescriptionTextBox.Name = "DescriptionTextBox";
-            this.DescriptionTextBox.Size = new System.Drawing.Size(434, 123);
-            this.DescriptionTextBox.TabIndex = 10;
-            this.DescriptionTextBox.TextChanged += new System.EventHandler(this.DescriptionTextBox_TextChanged);
+            this.CategoryLabel.AutoSize = true;
+            this.CategoryLabel.Location = new System.Drawing.Point(6, 101);
+            this.CategoryLabel.Name = "CategoryLabel";
+            this.CategoryLabel.Size = new System.Drawing.Size(69, 17);
+            this.CategoryLabel.TabIndex = 12;
+            this.CategoryLabel.Text = "Category:";
             // 
             // ItemsTab
             // 
@@ -264,5 +286,7 @@ namespace ObjectOrientedPractics.View.Tabs
         private System.Windows.Forms.Label IdLabel;
         private System.Windows.Forms.TextBox DescriptionTextBox;
         private System.Windows.Forms.Label DescriptionLabel;
+        private System.Windows.Forms.Label CategoryLabel;
+        private System.Windows.Forms.ComboBox CategoryComboBox;
     }
 }

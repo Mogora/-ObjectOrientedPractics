@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ObjectOrientedPractics.Services;
+using ObjectOrientedPractics.Model.Enums;
 
 namespace ObjectOrientedPractics.Model
 {
@@ -29,6 +30,9 @@ namespace ObjectOrientedPractics.Model
         /// </summary>
         private double _cost;
 
+        /// <summary>
+        /// Количество всех товаров.
+        /// </summary>
         private static int _allItemsCount;
 
         /// <summary>
@@ -47,14 +51,14 @@ namespace ObjectOrientedPractics.Model
         /// <param name="info">Описание товара. Должно быть не более 1000 символов.</param>
         /// <param name="cost">Стоимость товара. Должна быть в пределах от 0 до 100000.</param>
         /// <param name="category">Категория товара.</param>
-        public Item(string name, string info, double cost)
+        public Item(string name, string info, double cost, Category category)
         {
             Name = name;
             Cost = cost;
             Info = info;
             _allItemsCount++;
             _id = _allItemsCount;
-           
+            Category = category;
         }
 
         /// <summary>
@@ -97,5 +101,10 @@ namespace ObjectOrientedPractics.Model
                 _cost = value;
             }
         }
+
+        /// <summary>
+        /// Возвращает и задает категорию товара.
+        /// </summary>
+        public Category Category { get; set; }
     }
 }
