@@ -21,6 +21,17 @@ namespace ObjectOrientedPractics.Model
         /// </summary>
         private List<Customer> _customers;
 
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="Store"/>.
+        /// </summary>
+        /// <param name="items">Товар.</param>
+        /// <param name="customers">Продавец.</param>
+        public Store(List<Item> items, List<Customer> customers)
+        {
+            Items = items;
+            Customers = customers;
+        }
+
         public Store()
         {
             Items = new List<Item>();

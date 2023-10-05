@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
-using ObjectOrientedPractics.Model;
-using ObjectOrientedPractics.Services;
+﻿using ObjectOrientedPractics.Model;
 using ObjectOrientedPractics.Model.Enums;
+using ObjectOrientedPractics.Services;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace ObjectOrientedPractics.View.Tabs
 {
@@ -38,7 +34,6 @@ namespace ObjectOrientedPractics.View.Tabs
             {
                 CategoryComboBox.Items.Add(item);
             }
- 
         }
 
         /// <summary>

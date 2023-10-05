@@ -132,7 +132,5 @@ namespace ObjectOrientedPractics.View.Tabs
 
             UpdateCustomerInfo(_currentCustomer);
         }
-
-
     }
 }
