@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ObjectOrientedPractics.Services;
+using static ObjectOrientedPractics.Services.ValueValidator;
 using ObjectOrientedPractics.Model.Enums;
 
 namespace ObjectOrientedPractics.Model
@@ -77,7 +77,7 @@ namespace ObjectOrientedPractics.Model
             get => _name;
             set
             {
-                ValueValidator.AssertStringOnLength(nameof(Name), value, 200);
+                AssertStringOnLength(value, 200, nameof(Name));
                 _name = value;
             }
         }
@@ -87,7 +87,7 @@ namespace ObjectOrientedPractics.Model
             get => _info;
             set
             {
-                ValueValidator.AssertStringOnLength(nameof(Info), value, 1000);
+                AssertStringOnLength(value, 200, nameof(Info));
                 _info = value;
             }
         }
@@ -97,7 +97,7 @@ namespace ObjectOrientedPractics.Model
             get => _cost;
             set
             {
-                ValueValidator.AssertValueInRange(nameof(Cost), value, 0, 100000);
+                AssertValueInRange(value, 0, 100000, nameof(Cost));
                 _cost = value;
             }
         }

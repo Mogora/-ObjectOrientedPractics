@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using ObjectOrientedPractics.Services;
+using static ObjectOrientedPractics.Services.ValueValidator;
 
 namespace ObjectOrientedPractics.Model
 {
@@ -33,7 +31,7 @@ namespace ObjectOrientedPractics.Model
         private string _street;
 
         /// <summary>
-        /// Номера дома покупателя.
+        /// Номер дома покупателя.
         /// </summary>
         private string _building;
 
@@ -57,14 +55,15 @@ namespace ObjectOrientedPractics.Model
         /// Должно содержать до 10 символов (включительно).</param>
         /// <param name="apartmennt">Возвращает и задаёт номер квартиры покупателя.
         /// Должно содержать до 10 символов (включительно).</param>
-        public Address(int index, string country, string city, string street, string building, string apartment)
+        public Address(int index, string country, string city,
+            string street, string building, string apartmennt)
         {
             Index = index;
             Country = country;
             City = city;
             Street = street;
             Building = building;
-            Apartment = apartment;
+            Apartment = apartmennt;
         }
 
         /// <summary>
@@ -92,7 +91,7 @@ namespace ObjectOrientedPractics.Model
             }
             set
             {
-                ValueValidator.AssertValueInRange(nameof(Index), value, 100000, 999999);
+                AssertValueInRange(value, 100000, 999999, nameof(Index));
                 _index = value;
             }
         }
@@ -109,7 +108,7 @@ namespace ObjectOrientedPractics.Model
             }
             set
             {
-                ValueValidator.AssertStringOnLength(nameof(Country), value, 50);
+                AssertStringOnLength(value, 50, nameof(Country));
                 _country = value;
             }
         }
@@ -126,7 +125,7 @@ namespace ObjectOrientedPractics.Model
             }
             set
             {
-                ValueValidator.AssertStringOnLength(nameof(City), value, 50);
+                AssertStringOnLength(value, 50, nameof(City));
                 _city = value;
             }
         }
@@ -143,7 +142,7 @@ namespace ObjectOrientedPractics.Model
             }
             set
             {
-                ValueValidator.AssertStringOnLength(nameof(Street), value, 100);
+                AssertStringOnLength(value, 100, nameof(Street));
                 _street = value;
             }
         }
@@ -160,7 +159,7 @@ namespace ObjectOrientedPractics.Model
             }
             set
             {
-                ValueValidator.AssertStringOnLength(nameof(Building), value, 10);
+                AssertStringOnLength(value, 10, nameof(Building));
                 _building = value;
             }
         }
@@ -177,10 +176,9 @@ namespace ObjectOrientedPractics.Model
             }
             set
             {
-                ValueValidator.AssertStringOnLength(nameof(Apartment), value, 10);
+                AssertStringOnLength(value, 10, nameof(Apartment));
                 _apartment = value;
             }
         }
-
     }
 }
