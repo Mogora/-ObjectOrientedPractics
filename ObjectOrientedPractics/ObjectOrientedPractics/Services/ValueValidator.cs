@@ -1,73 +1,48 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ObjectOrientedPractics.Services
 {
-    public static class ValueValidator
+    /// <summary>
+    /// Предоставляет методы для валидации данных.
+    /// </summary>
+    public class ValueValidator
     {
         /// <summary>
-        /// Проверяет, что число является положительным.
+        /// Проверяет количество символов в заданной строке.
         /// </summary>
-        /// <param name="nameProperty">Имя свойства, откуда был вызван метод.</param>
-        /// <param name="value">Число.</param>
-        /// <exception cref="System.ArgumentException">Выбрасывается, когда число меньше или равно нулю.</exception>
-        public static void AssertOnPositiveValue(string nameProperty, double value)
+        /// <param name="value">Строка.</param>
+        /// <param name="maxLength">Максимальное количество символов в строке.</param>
+        /// <param name="propertyName">Имя свойства, откуда был вызван метод.</param>
+        /// <exception cref="ArgumentException">Выбрасывается, если количество
+        /// символов в строке превышает максимальное.</exception>
+        public static void AssertStringOnLength(string value, int maxLength, string propertyName)
         {
-            if (value < 0)
+            if (value.Length > maxLength)
             {
-                throw new System.ArgumentException(
-                    $"the value of the {nameProperty} field must be positive");
+                throw new ArgumentException(
+                    $"{propertyName} должно быть меньше {maxLength} символов");
             }
         }
 
         /// <summary>
-        /// Проверяет, что число находится в определённом диапазоне.
+        /// Проверяет, находится ли число в заданном диапазоне.
         /// </summary>
-        /// <param name="propertyName">Имя свойства, откуда был вызван метод.</param>
         /// <param name="value">Число.</param>
         /// <param name="min">Левая граница диапазона.</param>
         /// <param name="max">Правая граница диапазона.</param>
-        /// <exception cref="System.ArgumentException">Выбрасывается, если число находится вне диапазона.</exception>
-        public static void AssertValueInRange(string propertyName, double value, int min, int max)
+        /// <param name="propertyName">Имя свойства, откуда был вызван метод.</param>
+        /// <exception cref="ArgumentException">Выбрасывается, если число находится 
+        /// вне диапазона.</exception>
+        public static void AssertValueInRange(double value,
+                                              double min,
+                                              double max,
+                                              string propertyName)
         {
             if (value < min || value > max)
             {
-                throw new System.ArgumentException(
-                    $"the value of the {propertyName} field should be between {min}" +
-                    $" and {max} (inclusive).");
+                throw new ArgumentException(
+                    $"{propertyName} должно быть в диапазоне от {min} до {max}");
             }
-        }
-
-        /// <summary>
-        /// Проверяет, что количество символов в строке не превышает предела.
-        /// </summary>
-        /// <param name="propertyName">Имя свойства, откуда был вызван метод.</param>
-        /// <param name="maxLength">Максимальное значение.</param>
-        /// <param name="value">Строка.</param>
-        /// <exception cref="ArgumentException">Выбрасывается, когда количество символов строки превышает предел.</exception>
-        public static void AssertStringOnLength(string propertyName, string value, int maxLength)
-        {
-            if (value.Length > maxLength)
-                throw new ArgumentException(
-                    $"number of characters in the field {propertyName}" +
-                    $" must not exceed {maxLength}.");
-        }
-
-        /// <summary>
-        /// Проверяет, что количество цифр в числе равно заданному.
-        /// </summary>
-        /// <param name="propertyName">Имя свойства, откуда был вызван метод.</param>
-        /// <param name="length">Заданная длина.</param>
-        /// <param name="value">Число.</param>
-        /// <exception cref="ArgumentException">Выбрасывается, когда количество цифр числа не равно заданному.</exception>
-        public static void AssertStringLength(string propertyName, int value, int length)
-        {
-            if (value.ToString().Length != length)
-                throw new ArgumentException(
-                    $"the number of characters in {propertyName} must be equal to {length}.");
         }
     }
 }

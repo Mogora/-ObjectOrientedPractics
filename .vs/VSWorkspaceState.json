@@ -1,7 +1,15 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ObjectOrientedPractics",
+    "\\ObjectOrientedPractics\\ObjectOrientedPractics",
+    "\\ObjectOrientedPractics\\ObjectOrientedPractics\\Model",
+    "\\ObjectOrientedPractics\\ObjectOrientedPractics\\Model\\Enums",
+    "\\ObjectOrientedPractics\\ObjectOrientedPractics\\Services",
+    "\\ObjectOrientedPractics\\ObjectOrientedPractics\\View",
+    "\\ObjectOrientedPractics\\ObjectOrientedPractics\\View\\Controls",
+    "\\ObjectOrientedPractics\\ObjectOrientedPractics\\View\\Tabs"
   ],
-  "SelectedNode": "\\C:\\Users\\Тамила\\source\\OOP",
+  "SelectedNode": "\\ObjectOrientedPractics\\ObjectOrientedPractics\\View\\Tabs\\CustomersTab.cs",
   "PreviewInSolutionExplorer": false
 }

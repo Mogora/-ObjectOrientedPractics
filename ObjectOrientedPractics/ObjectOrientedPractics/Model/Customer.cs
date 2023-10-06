@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ObjectOrientedPractics.Services;
+using static ObjectOrientedPractics.Services.ValueValidator;
 
 namespace ObjectOrientedPractics.Model
 {
@@ -22,7 +22,7 @@ namespace ObjectOrientedPractics.Model
         /// <summary>
         /// Адрес покупателя.
         /// </summary>
-        private string _address;
+        private Address _address;
 
         /// <summary>
         /// Количество покупателей.
@@ -36,6 +36,7 @@ namespace ObjectOrientedPractics.Model
         {
             _allCustomersCount++;
             _id = _allCustomersCount;
+            Address = new Address();
         }
 
         /// <summary>
@@ -43,7 +44,7 @@ namespace ObjectOrientedPractics.Model
         /// </summary>
         /// <param name="fullname">Полное имя. Должно быть не более 200 символов.</param>
         /// <param name="address">Адрес. Должен быть не более 500 символов.</param>
-        public Customer(string fullName, string address)
+        public Customer(string fullName, Address address)
         {
             FullName = fullName;
             Address = address;
@@ -64,7 +65,7 @@ namespace ObjectOrientedPractics.Model
             get => _fullName;
             set
             {
-                ValueValidator.AssertStringOnLength(nameof(FullName), value, 200);
+                AssertStringOnLength(value, 200, nameof(FullName));
                 _fullName = value;
             }
         }
@@ -72,7 +73,7 @@ namespace ObjectOrientedPractics.Model
         /// <summary>
         /// Возвращает и задаёт адрес покупателя. Должно быть не более 500 символов.
         /// </summary>
-        public string Address
+        public Address Address
         {
             get
             {

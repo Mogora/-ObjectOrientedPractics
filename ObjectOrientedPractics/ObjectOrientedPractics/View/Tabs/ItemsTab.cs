@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
-using ObjectOrientedPractics.Model;
+﻿using ObjectOrientedPractics.Model;
+using ObjectOrientedPractics.Model.Enums;
 using ObjectOrientedPractics.Services;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace ObjectOrientedPractics.View.Tabs
 {
@@ -22,12 +19,21 @@ namespace ObjectOrientedPractics.View.Tabs
         /// </summary>
         private Item _currentItem;
 
+        /// <summary>
+        /// Создаёт экзампляр класса <see cref="ItemsTab"/>.
+        /// </summary>
         public ItemsTab()
         {
             _items = new List<Item>();
 
             InitializeComponent();
- 
+
+            var items = Enum.GetValues(typeof(Category));
+
+            foreach (var item in items)
+            {
+                CategoryComboBox.Items.Add(item);
+            }
         }
 
         /// <summary>
@@ -173,5 +179,19 @@ namespace ObjectOrientedPractics.View.Tabs
 
             UpdateItemInfo(_currentItem);
         }
+
+        private void CategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int indexCategory = CategoryComboBox.SelectedIndex;
+            int indexListBox = ItemsListBox.SelectedIndex;
+
+            if ((indexCategory == -1) || (indexListBox == -1))
+            {
+                return;
+            }
+
+            _currentItem.Category = (Category)CategoryComboBox.SelectedItem;
+        }
     }
 }
+
