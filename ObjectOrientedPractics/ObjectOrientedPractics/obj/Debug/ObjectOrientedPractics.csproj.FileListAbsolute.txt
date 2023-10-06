@@ -23,3 +23,4 @@ C:\Users\Тамила\Source\OOP\ObjectOrientedPractics\ObjectOrientedPractics\O
 C:\Users\Тамила\Source\OOP\ObjectOrientedPractics\ObjectOrientedPractics\ObjectOrientedPractics\obj\Debug\ObjectOrientedPractics.exe
 C:\Users\Тамила\Source\OOP\ObjectOrientedPractics\ObjectOrientedPractics\ObjectOrientedPractics\obj\Debug\ObjectOrientedPractics.pdb
 C:\Users\Тамила\Source\OOP\ObjectOrientedPractics\ObjectOrientedPractics\ObjectOrientedPractics\obj\Debug\ObjectOrientedPractics.View.Controls.AddressControl.resources
+C:\Users\Тамила\Source\OOP\ObjectOrientedPractics\ObjectOrientedPractics\ObjectOrientedPractics\obj\Debug\ObjectOrientedPractics.View.Tabs.CartsTab.resources
