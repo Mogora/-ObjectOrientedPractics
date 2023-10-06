@@ -30,6 +30,11 @@ namespace ObjectOrientedPractics.Model
         private Cart _cart;
 
         /// <summary>
+        /// Список заказов покупателя.
+        /// </summary>
+        private List<Order> _orders;
+
+        /// <summary>
         /// Количество покупателей.
         /// </summary>
         private static int _allCustomersCount;
@@ -43,6 +48,7 @@ namespace ObjectOrientedPractics.Model
             _id = _allCustomersCount;
             Address = new Address();
             Cart = new Cart();
+            Orders = new List<Order>();
         }
 
         /// <summary>
@@ -50,11 +56,12 @@ namespace ObjectOrientedPractics.Model
         /// </summary>
         /// <param name="fullname">Полное имя. Должно быть не более 200 символов.</param>
         /// <param name="address">Адрес. Должен быть не более 500 символов.</param>
-        public Customer(string fullName, Address address, Cart cart)
+        public Customer(string fullName, Address address, Cart cart, List<Order> orders)
         {
             FullName = fullName;
             Address = address;
             Cart = Cart;
+            Orders = orders;
             _allCustomersCount++;
             _id = _allCustomersCount;
         }
@@ -101,6 +108,18 @@ namespace ObjectOrientedPractics.Model
             set
             {
                 _cart = value;
+            }
+        }
+
+        public List<Order> Orders
+        {
+            get
+            {
+                return _orders;
+            }
+            set
+            {
+                _orders = value;
             }
         }
     }
