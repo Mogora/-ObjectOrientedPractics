@@ -1,6 +1,7 @@
-﻿using ObjectOrientedPractics.Model;
+﻿using System.Windows.Forms;
+using ObjectOrientedPractics.Model;
 using ObjectOrientedPractics.View.Tabs;
-using System.Windows.Forms;
+using ObjectOrientedPractics.Services;
 
 namespace ObjectOrientedPractics
 {
@@ -14,6 +15,26 @@ namespace ObjectOrientedPractics
         public MainForm()
         {
             InitializeComponent();
+
+            //ItemsTab.Items = _store.Items;
+            //CustomersTab.Customers = _store.Customers;
+            //CartsTab.Items = Store.Items;
+            //CartsTab.Customers = Store.Customers;
+        }
+
+        /// <summary>
+        /// Возвращает и задаёт информацию о магазине (товары и покупатели).
+        /// </summary>
+        public Store Store
+        {
+            get
+            {
+                return _store;
+            }
+            set
+            {
+                _store = value;
+            }
         }
     }
 }

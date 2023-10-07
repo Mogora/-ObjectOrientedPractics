@@ -35,7 +35,17 @@ namespace ObjectOrientedPractics.View.Tabs
         /// <summary>
         /// Возвращает и задает коллекцию покупателей.
         /// </summary>
-        public List<Customer> Customers { get; set; }
+        public List<Customer> Customers
+        {
+            get
+            {
+                return _customers;
+            }
+            set
+            {
+                _customers = value;
+            }
+        }
 
         /// <summary>
         /// Очищает информацию о зданиях из списка и текстовых полей.
