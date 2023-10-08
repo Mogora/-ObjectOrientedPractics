@@ -3,13 +3,9 @@
     "",
     "\\ObjectOrientedPractics",
     "\\ObjectOrientedPractics\\ObjectOrientedPractics",
-    "\\ObjectOrientedPractics\\ObjectOrientedPractics\\Model",
-    "\\ObjectOrientedPractics\\ObjectOrientedPractics\\Model\\Enums",
-    "\\ObjectOrientedPractics\\ObjectOrientedPractics\\Services",
     "\\ObjectOrientedPractics\\ObjectOrientedPractics\\View",
-    "\\ObjectOrientedPractics\\ObjectOrientedPractics\\View\\Controls",
     "\\ObjectOrientedPractics\\ObjectOrientedPractics\\View\\Tabs"
   ],
-  "SelectedNode": "\\ObjectOrientedPractics\\ObjectOrientedPractics\\View\\Tabs\\CustomersTab.cs",
+  "SelectedNode": "\\ObjectOrientedPractics\\ObjectOrientedPractics\\View\\MainForm.cs",
   "PreviewInSolutionExplorer": false
 }

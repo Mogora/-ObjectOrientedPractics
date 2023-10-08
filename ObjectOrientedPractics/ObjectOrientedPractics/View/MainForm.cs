@@ -16,10 +16,10 @@ namespace ObjectOrientedPractics
         {
             InitializeComponent();
 
-            //ItemsTab.Items = _store.Items;
-            //CustomersTab.Customers = _store.Customers;
-            //CartsTab.Items = Store.Items;
-            //CartsTab.Customers = Store.Customers;
+            itemsTab1.Items = _store.Items;
+            customersTabs1.Customers = _store.Customers;
+            cartsTab1.Items = Store.Items;
+            cartsTab1.Customers = Store.Customers;
         }
 
         /// <summary>
